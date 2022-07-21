@@ -19,11 +19,11 @@ pt = 5
 
 def get_folder_name(num_report):
     if num_report < 10:
-        folder_name = "MODULE_00" + str(num_report)
+        folder_name = "MODULE_00" + str(num_report)  # + "b"
     elif num_report < 100:
-        folder_name = "MODULE_0" + str(num_report)
+        folder_name = "MODULE_0" + str(num_report)  # + "b"
     else:
-        folder_name = "MODULE_" + str(num_report)
+        folder_name = "MODULE_" + str(num_report)  # + "b"
 
     return folder_name
 
