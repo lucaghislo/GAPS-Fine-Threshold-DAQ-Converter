@@ -56,7 +56,6 @@ for i in range(start, stop + 1):
             if data.iloc[j, 0] == ch and data.iloc[j, 1] == pt:
                 fth_dec = data.iloc[j, 2]
                 fth_bin = bin(fth_dec).replace("0b", "").zfill(3)
-                print(fth_bin)
                 write_file(output, ch, fth_bin)
                 ch = ch + 1
 
