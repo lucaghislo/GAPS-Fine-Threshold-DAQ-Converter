@@ -27,7 +27,9 @@ def get_folder_name(num_report):
 
     return folder_name
 
-def print
+
+def write_file(file, channel, fth):
+    file.write("fine threshold ch#" + str(channel) + " = " + str(fth) + "\n")
 
 
 start = int(input("Range START: "))
@@ -47,12 +49,15 @@ for i in range(start, stop + 1):
             + str(".defs")
         )
 
+        output = open(output_path, "a")
         ch = 0
+
         for j in range(0, len(data)):
             if data.iloc[j, 0] == ch and data.iloc[j, 1] == pt:
                 fth_dec = data.iloc[j, 2]
                 fth_bin = bin(fth_dec).replace("0b", "").zfill(3)
                 print(fth_bin)
+                write_file(output, ch, fth_bin)
                 ch = ch + 1
 
-        output = open(output_path, "w")
+        output.close()
