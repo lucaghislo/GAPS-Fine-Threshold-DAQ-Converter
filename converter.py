@@ -9,7 +9,7 @@ from pathlib import Path
 import pandas as pd
 
 path_first = str(
-    r"C:\Users\ghisl\Documents\GitHub\GAPS-Fine-Threshold-DAQ-Converter\modules\FR4"
+    r"C:\Users\ghisl\Documents\GitHub\GAPS-Fine-Threshold-DAQ-Converter\modules\debugging_row4"
 )
 path_second = (
     r"\1\analysis_matlab\ThresholdScan\Thr_disp_minimization_fine_thresholds.dat"
@@ -43,7 +43,7 @@ for i in range(start, stop + 1):
     if Path(full_path).is_file():
         data = pd.read_csv(full_path, skiprows=1, sep="\t")
         output_path = (
-            str("fthr_files")
+            str("fthr_files\\debugging_row4")
             + str("\\")
             + str("FTH_test_defaults_")
             + str(folder_name[7:])
