@@ -9,11 +9,12 @@ from pathlib import Path
 import pandas as pd
 
 path_first = str(
-    r"C:\Users\ghisl\Documents\GitHub\GAPS-Fine-Threshold-DAQ-Converter\modules"
+    r"C:\Users\ghisl\Documents\GitHub\GAPS-Fine-Threshold-DAQ-Converter\modules\FR4"
 )
 path_second = (
     r"\1\analysis_matlab\ThresholdScan\Thr_disp_minimization_fine_thresholds.dat"
 )
+
 pt = 5
 
 
